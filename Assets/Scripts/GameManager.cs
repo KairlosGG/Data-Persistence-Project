@@ -8,7 +8,9 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         string playerName = PlayerPrefs.GetString("PlayerName", "Player");
-        playerNameText.text = "Best Score: " + playerName + " : 0";
+        int bestScore = PlayerPrefs.GetInt("BestScore", 0);
+        playerNameText.text = $"Best Score: {playerName} : {bestScore}";
     }
 }
+
 
